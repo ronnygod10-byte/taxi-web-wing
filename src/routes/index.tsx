@@ -4,14 +4,10 @@ import {
   Clock,
   Armchair,
   MapPin,
-  Plane,
-  CalendarDays,
-  Stethoscope,
-  Repeat,
-  Route as RouteIcon,
-  Star,
   MessageCircle,
   Phone,
+  ArrowUpRight,
+  Check,
 } from "lucide-react";
 import taxiCar from "@/assets/taxi-car.jpg";
 
@@ -49,185 +45,162 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 function Index() {
+  const differentials = [
+    { icon: ShieldCheck, title: "Segurança", text: "Sua viagem com total tranquilidade." },
+    { icon: Clock, title: "Pontualidade", text: "Chego no horário, com compromisso." },
+    { icon: Armchair, title: "Conforto", text: "Veículo limpo, climatizado e bem cuidado." },
+  ];
+
+  const services = [
+    "Viagens rápidas ou longas",
+    "Aeroporto",
+    "Eventos",
+    "Consultas e compromissos",
+    "Corridas do dia a dia",
+  ];
+
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-4 pt-10 pb-14 sm:pt-16">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
-            <div>
-              <p className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-primary uppercase">
-                <Star className="h-3.5 w-3.5 fill-primary text-primary" aria-hidden />
-                Táxi · Perdizes, São Paulo
-              </p>
-              <h1 className="mt-5 font-display text-5xl leading-[0.95] font-black tracking-tight uppercase sm:text-6xl">
-                Edi <span className="text-primary">Taxista</span>
-              </h1>
-              <p className="mt-3 font-display text-2xl font-bold text-primary sm:text-3xl">
-                Seu destino em boas mãos!
-              </p>
-              <p className="mt-4 max-w-md text-base text-muted-foreground sm:text-lg">
-                Corridas rápidas ou longas, aeroporto, eventos, consultas e o dia a
-                dia — com atendimento de qualidade e respeito, sempre.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-4 font-display text-lg font-bold text-primary-foreground uppercase tracking-wide shadow-[0_10px_30px_-10px_var(--color-primary)] transition-transform hover:scale-[1.02]"
-                >
-                  <WhatsAppIcon className="h-6 w-6" />
-                  Chame no WhatsApp
-                </a>
-                <a
-                  href={PHONE_LINK}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-primary/40 px-7 py-4 font-display text-lg font-bold text-primary uppercase tracking-wide transition-colors hover:bg-primary/10"
-                >
-                  <Phone className="h-5 w-5" aria-hidden />
-                  {PHONE_DISPLAY}
-                </a>
-              </div>
-              <p className="mt-4 text-sm text-muted-foreground">
-                Fácil, rápido e seguro!
-              </p>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-3 rounded-3xl bg-primary/10 blur-2xl" aria-hidden />
-              <img
-                src={taxiCar}
-                alt="Táxi do Edi — sedã branco com sinal luminoso de táxi"
-                width={1280}
-                height={960}
-                className="relative w-full rounded-3xl border border-primary/25 object-cover shadow-2xl"
-              />
-            </div>
+    <main className="min-h-screen bg-background px-3 py-3 text-foreground sm:px-6 sm:py-8">
+      <article className="mx-auto w-full max-w-[720px] overflow-hidden border border-border bg-card shadow-2xl sm:rounded-2xl">
+        <header className="relative overflow-hidden bg-secondary px-6 pt-8 pb-6 text-secondary-foreground sm:px-10 sm:pt-11">
+          <div className="reveal flex items-center justify-between border-b border-secondary-foreground/15 pb-4">
+            <span className="text-xs font-semibold uppercase text-primary">Táxi particular</span>
+            <span className="text-xs text-secondary-foreground/60">Perdizes · SP</span>
           </div>
-        </div>
-      </section>
 
-      {/* Diferenciais */}
-      <section className="border-y border-border bg-card/60">
-        <div className="mx-auto grid max-w-6xl gap-6 px-4 py-12 sm:grid-cols-3">
-          {[
-            {
-              icon: ShieldCheck,
-              title: "Segurança",
-              text: "Sua viagem com total tranquilidade.",
-            },
-            {
-              icon: Clock,
-              title: "Pontualidade",
-              text: "Chego no horário, com compromisso.",
-            },
-            {
-              icon: Armchair,
-              title: "Conforto",
-              text: "Veículo limpo, climatizado e bem cuidado.",
-            },
-          ].map((item) => (
-            <div key={item.title} className="flex items-start gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-primary/30 bg-primary/10">
-                <item.icon className="h-6 w-6 text-primary" aria-hidden />
-              </span>
-              <div>
-                <h2 className="font-display text-lg font-bold text-primary uppercase tracking-wide">
-                  {item.title}
-                </h2>
-                <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+          <div className="reveal reveal-delay pt-8 text-center">
+            <h1 className="font-display text-5xl font-bold sm:text-6xl">Edi Taxista</h1>
+            <p className="mt-3 text-sm font-medium uppercase text-primary sm:text-base">
+              Seu destino em boas mãos
+            </p>
+          </div>
 
-      {/* Serviços */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="font-display text-3xl font-black uppercase tracking-tight sm:text-4xl">
-          Para onde você <span className="text-primary">precisa ir</span>, eu te levo
-        </h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { icon: RouteIcon, label: "Viagens rápidas ou longas" },
-            { icon: Plane, label: "Aeroporto" },
-            { icon: CalendarDays, label: "Eventos" },
-            { icon: Stethoscope, label: "Consultas e compromissos" },
-            { icon: Repeat, label: "Dia a dia" },
-          ].map((service) => (
-            <div
-              key={service.label}
-              className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4"
+          <figure className="reveal reveal-delay relative mt-7 overflow-hidden rounded-lg border border-secondary-foreground/15">
+            <img
+              src={taxiCar}
+              alt="Sedã branco usado como imagem provisória do táxi do Edi"
+              width={1280}
+              height={960}
+              className="aspect-[16/9] w-full object-cover"
+            />
+            <figcaption className="absolute right-3 bottom-3 bg-secondary/90 px-3 py-1.5 text-xs text-secondary-foreground/80 backdrop-blur-sm">
+              Perdizes e Centro Expandido
+            </figcaption>
+          </figure>
+
+          <p className="mx-auto mt-6 max-w-lg text-center text-sm leading-6 text-secondary-foreground/70 sm:text-base">
+            Corridas rápidas ou longas, aeroporto, eventos e compromissos com
+            atendimento de qualidade e respeito.
+          </p>
+
+          <div className="mt-6 grid gap-3 sm:grid-cols-[1.2fr_0.8fr]">
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-14 items-center justify-center gap-3 rounded-lg bg-accent px-5 font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
             >
-              <service.icon className="h-5 w-5 shrink-0 text-primary" aria-hidden />
-              <span className="font-medium">{service.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Área de atendimento + selo */}
-      <section className="mx-auto grid max-w-6xl gap-6 px-4 pb-16 lg:grid-cols-2">
-        <div className="rounded-2xl border border-primary/30 bg-card p-8">
-          <div className="flex items-start gap-4">
-            <MapPin className="mt-1 h-10 w-10 shrink-0 text-primary" aria-hidden />
-            <div>
-              <h2 className="font-display text-2xl font-black uppercase tracking-tight text-primary">
-                Atendo centro e centro expandido
-              </h2>
-              <p className="mt-2 text-muted-foreground">
-                Estamos em <strong className="text-foreground">Perdizes</strong> —
-                atendimento em toda a região central de São Paulo e arredores.
-              </p>
-            </div>
+              <WhatsAppIcon className="h-5 w-5" />
+              Chamar no WhatsApp
+              <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </a>
+            <a
+              href={PHONE_LINK}
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-secondary-foreground/20 bg-secondary-foreground/5 px-5 font-medium text-secondary-foreground transition-colors hover:bg-secondary-foreground/10"
+            >
+              <Phone className="h-4 w-4" aria-hidden />
+              {PHONE_DISPLAY}
+            </a>
           </div>
-        </div>
-        <div className="flex flex-col items-center justify-center rounded-2xl border border-primary/30 bg-card p-8 text-center">
-          <div className="flex gap-1 text-primary" aria-hidden>
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-5 w-5 fill-primary" />
-            ))}
-          </div>
-          <h2 className="mt-3 font-display text-xl font-bold uppercase tracking-wide">
-            Atendimento com qualidade
-          </h2>
-          <p className="mt-1 inline-block rounded-md bg-primary px-3 py-1 font-display text-lg font-black uppercase text-primary-foreground">
-            E respeito sempre!
-          </p>
-          <p className="mt-4 text-sm italic text-muted-foreground">
-            Confiança que te leva tranquilo ao seu destino!
-          </p>
-        </div>
-      </section>
+        </header>
 
-      {/* CTA final */}
-      <section className="border-t border-border bg-card/60">
-        <div className="mx-auto max-w-3xl px-4 py-16 text-center">
-          <h2 className="font-display text-3xl font-black uppercase tracking-tight sm:text-4xl">
-            Precisa de um <span className="text-primary">táxi</span> agora?
-          </h2>
-          <p className="mt-3 text-muted-foreground">
-            Me chame no WhatsApp que combinamos a sua corrida em minutos.
-          </p>
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 font-display text-xl font-bold text-primary-foreground uppercase tracking-wide shadow-[0_10px_30px_-10px_var(--color-primary)] transition-transform hover:scale-[1.02]"
-          >
-            <WhatsAppIcon className="h-6 w-6" />
-            Chame no WhatsApp
-          </a>
-          <p className="mt-4 font-display text-lg font-bold text-primary">
+        <div className="space-y-12 px-6 py-10 sm:px-10 sm:py-12">
+          <section aria-labelledby="diferenciais">
+            <p className="text-xs font-bold uppercase text-muted-foreground">01 · Diferenciais</p>
+            <h2 id="diferenciais" className="mt-2 font-display text-3xl font-bold">
+              Uma viagem tranquila, do início ao destino.
+            </h2>
+            <div className="mt-7 divide-y divide-border border-y border-border">
+              {differentials.map((item) => (
+                <div key={item.title} className="grid grid-cols-[44px_1fr] gap-4 py-5">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground">
+                    <item.icon className="h-5 w-5" aria-hidden />
+                  </span>
+                  <div>
+                    <h3 className="font-semibold">{item.title}</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section aria-labelledby="servicos">
+            <p className="text-xs font-bold uppercase text-muted-foreground">02 · Serviços</p>
+            <h2 id="servicos" className="mt-2 font-display text-3xl font-bold">
+              Para onde você precisa ir.
+            </h2>
+            <ul className="mt-7 grid gap-x-8 sm:grid-cols-2">
+              {services.map((service) => (
+                <li key={service} className="flex items-center gap-3 border-b border-border py-4 text-sm font-medium">
+                  <Check className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+                  {service}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="border-l-4 border-primary bg-muted px-6 py-7" aria-labelledby="area">
+            <div className="flex gap-4">
+              <MapPin className="mt-1 h-6 w-6 shrink-0 text-primary" aria-hidden />
+              <div>
+                <p className="text-xs font-bold uppercase text-muted-foreground">03 · Área atendida</p>
+                <h2 id="area" className="mt-2 font-display text-2xl font-bold">
+                  Perdizes, Centro e Centro Expandido
+                </h2>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                  Atendimento em toda a região central de São Paulo e arredores.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="text-center" aria-label="Compromisso de atendimento">
+            <p className="font-display text-2xl font-semibold leading-snug">
+              “Confiança que te leva tranquilo ao seu destino.”
+            </p>
+            <p className="mt-3 text-xs font-bold uppercase text-primary">
+              Qualidade e respeito, sempre
+            </p>
+          </section>
+
+          <section className="border-t border-border pt-10 text-center" aria-labelledby="contato">
+            <h2 id="contato" className="font-display text-3xl font-bold">
+              Precisa de um táxi?
+            </h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Fale diretamente com o Edi e combine a sua corrida.
+            </p>
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-lg bg-secondary px-6 font-semibold text-secondary-foreground transition-transform hover:-translate-y-0.5"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+              Solicitar corrida agora
+              <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </a>
+          </section>
+        </div>
+
+        <footer className="flex flex-col items-center justify-between gap-2 border-t border-border bg-muted px-6 py-6 text-xs text-muted-foreground sm:flex-row sm:px-10">
+          <span>Edi Taxista · São Paulo, SP</span>
+          <a href={PHONE_LINK} className="font-semibold text-foreground hover:text-primary">
             {PHONE_DISPLAY}
-          </p>
-        </div>
-      </section>
-
-      <footer className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-4 py-6 text-center text-xs text-muted-foreground">
-          Edi Taxista · Perdizes, São Paulo · {PHONE_DISPLAY}
-        </div>
-      </footer>
+          </a>
+        </footer>
+      </article>
     </main>
   );
 }
