@@ -9,7 +9,7 @@ import {
   ArrowUpRight,
   Check,
 } from "lucide-react";
-import taxiCar from "@/assets/taxi-car.jpg";
+import taxiCar from "@/assets/edi-taxi-car.png";
 
 const WHATSAPP_NUMBER = "5511940428057";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -78,10 +78,10 @@ function Index() {
           <figure className="reveal reveal-delay relative mt-7 overflow-hidden rounded-lg border border-secondary-foreground/15">
             <img
               src={taxiCar}
-              alt="Sedã branco usado como imagem provisória do táxi do Edi"
+              alt="Táxi branco do Edi com identificação amarela e preta"
               width={1280}
               height={960}
-              className="aspect-[16/9] w-full object-cover"
+              className="aspect-[16/9] w-full object-contain"
             />
             <figcaption className="absolute right-3 bottom-3 bg-secondary/90 px-3 py-1.5 text-xs text-secondary-foreground/80 backdrop-blur-sm">
               Perdizes e Centro Expandido
