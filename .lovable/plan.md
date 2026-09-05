@@ -14,7 +14,7 @@ Transformar o mini site atual em uma apresentação mais refinada, compacta e or
 ## Direção visual escolhida
 
 - **Paleta:** preto executivo `#090909`, grafite `#1A1A1A`, amarelo táxi `#F4C430` e branco suave `#F5F5F2`.
-- **Tipografia:** Archivo nos títulos e Hind nos textos.
+- **Tipografia:** testar a combinação elegante vista na segunda proposta: Playfair Display nos títulos e Inter nos textos, mantendo a estrutura escolhida da primeira opção.
 - **Composição:** editorial assimétrica, com o carro como principal elemento visual.
 - **Formato:** experiência enxuta e prioritariamente móvel, abrindo com elegância também em telas maiores.
 - **Acabamento:** linhas finas, espaçamento rigoroso, poucos cantos arredondados, amarelo usado de forma estratégica e movimentos discretos.
