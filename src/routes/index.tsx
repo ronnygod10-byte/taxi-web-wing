@@ -9,7 +9,7 @@ import {
   ArrowUpRight,
   Check,
 } from "lucide-react";
-import taxiCar from "@/assets/edi-taxi-car-night.png";
+import taxiCar from "@/assets/edi-taxi-car-day.png";
 
 const WHATSAPP_NUMBER = "5511940428057";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -78,7 +78,7 @@ function Index() {
           <figure className="reveal reveal-delay relative -mx-6 mt-7 overflow-hidden sm:-mx-10">
             <img
               src={taxiCar}
-              alt="Táxi branco do Edi em uma avenida de São Paulo à noite"
+              alt="Táxi branco do Edi em uma rua do centro de São Paulo durante o dia"
               width={1280}
               height={960}
               className="aspect-[16/10] w-full object-cover object-center sm:aspect-[16/9]"
