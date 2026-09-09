@@ -9,7 +9,7 @@ import {
   ArrowUpRight,
   Check,
 } from "lucide-react";
-import taxiCar from "@/assets/edi-taxi-car.png";
+import taxiCar from "@/assets/edi-taxi-car-night.png";
 
 const WHATSAPP_NUMBER = "5511940428057";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
